@@ -62,5 +62,5 @@ const newWin = () => {
 }
 
 app.on('ready', newWin)
-app.on('window-all-closed', () => process.platform !== 'darwin' && app.quit())
+app.on('window-all-closed', () => app.quit())
 app.on('activate', () => win === null && newWin())
